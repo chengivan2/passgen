@@ -1,5 +1,6 @@
 "use client";
 import { useState } from 'react';
+import './theform.css';
 
 export default function TheForm() {
 
