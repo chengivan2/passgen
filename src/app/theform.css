@@ -7,6 +7,7 @@
   background: #2d0231;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
   text-align: center;
+  color: #f5f5f5;
 }
 
 .the-password {
@@ -23,9 +24,12 @@
 }
 
 .the-password input {
+  color: #f8f8f8;
   width: 300px;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: none;
+  outline: none;
+  background-color: transparent;
   border-radius: 5px;
   margin-right: 10px;
 }
