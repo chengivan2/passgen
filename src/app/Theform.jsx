@@ -54,11 +54,15 @@ export default function TheForm() {
         </div>
       </div>
 
+      <div className="the-options-header">
+        <h6>SETTINGS</h6>
+      </div>
       <div className="options">
         <div className="option">
           <label>
             <input
               type="checkbox"
+              className="checkbox"
               checked={options.lowercase}
               onChange={(e) =>
                 setOptions({ ...options, lowercase: e.target.checked })
@@ -71,6 +75,7 @@ export default function TheForm() {
           <label>
             <input
               type="checkbox"
+              className="checkbox"
               checked={options.uppercase}
               onChange={(e) =>
                 setOptions({ ...options, uppercase: e.target.checked })
@@ -83,6 +88,7 @@ export default function TheForm() {
           <label>
             <input
               type="checkbox"
+              className="checkbox"
               checked={options.digits}
               onChange={(e) =>
                 setOptions({ ...options, digits: e.target.checked })
@@ -95,6 +101,7 @@ export default function TheForm() {
           <label>
             <input
               type="checkbox"
+              className="checkbox"
               checked={options.specials}
               onChange={(e) =>
                 setOptions({ ...options, specials: e.target.checked })
