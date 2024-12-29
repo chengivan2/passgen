@@ -39,10 +39,10 @@ export default function TheForm() {
       </div>
 
       <div className="the-length">
-        <label htmlFor="length" class="slider-label">
+        <label htmlFor="length" className="slider-label">
           Length: <span id="lengthValue">{length}</span>
         </label>
-        <div class="slider">
+        <div className="slider">
           <input
             id="length"
             type="range"
