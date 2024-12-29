@@ -86,56 +86,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: #3e033c;
+  padding: 1em;
+  border-radius: 0.5em;
 }
 
 .option label {
   display: flex;
   align-items: center;
-}
-
-/* Create a custom checkbox */
-input.checkbox {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-}
-
-/* On mouse-over, add a grey background color */
-.option:hover input ~ .checkbox {
-  background-color: #ccc;
-}
-
-/* When the checkbox is checked, add a blue background */
-.option input:checked ~ .checkbox {
-  background-color: #2196f3;
-}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkbox:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/* Show the checkmark when checked */
-.option input:checked ~ .checkox:after {
-  display: block;
-}
-
-/* Style the checkmark/indicator */
-.option .checkbox:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
 }
 
 .generate {
