@@ -13,6 +13,13 @@
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 8px;
+  background: #3e033c;
+  color: #ccc;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .the-password input {
