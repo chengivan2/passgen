@@ -1,7 +1,80 @@
+.the-generator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  background: #2d0231;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
 .the-password {
-  background-color: #141414;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.the-password input {
+  width: 300px;
   padding: 10px;
-  margin: 10px 0;
   border: 1px solid #ccc;
-  border-radius: .5em;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.the-password button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.the-password button:hover {
+  background-color: #0056b3;
+}
+
+.the-length {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.the-length input {
+  margin-right: 10px;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.option {
+  margin: 10px;
+}
+
+.option label {
+  display: flex;
+  align-items: center;
+}
+
+.option input {
+  margin-right: 5px;
+}
+
+.generate {
+  padding: 10px 20px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.generate:hover {
+  background-color: #218838;
 }

@@ -5,8 +5,16 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  background: linear-gradient(
+    20deg,
+    rgba(131, 95, 139, 1) 0%,
+    rgba(92, 31, 99, 1) 98%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
