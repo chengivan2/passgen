@@ -60,59 +60,58 @@ export default function TheForm() {
       <div className="options">
         <div className="option">
           <label>
-            <input
-              type="checkbox"
-              className="checkbox"
-              checked={options.lowercase}
-              onChange={(e) =>
-                setOptions({ ...options, lowercase: e.target.checked })
-              }
-            />
             <span>a-z</span>
           </label>
+          <input
+            type="checkbox"
+            checked={options.lowercase}
+            onChange={(e) =>
+              setOptions({ ...options, lowercase: e.target.checked })
+            }
+          />
         </div>
+
         <div className="option">
           <label>
-            <input
-              type="checkbox"
-              className="checkbox"
-              checked={options.uppercase}
-              onChange={(e) =>
-                setOptions({ ...options, uppercase: e.target.checked })
-              }
-            />
             <span>A-Z</span>
           </label>
+          <input
+            type="checkbox"
+            checked={options.uppercase}
+            onChange={(e) =>
+              setOptions({ ...options, uppercase: e.target.checked })
+            }
+          />
         </div>
+
         <div className="option">
           <label>
-            <input
-              type="checkbox"
-              className="checkbox"
-              checked={options.digits}
-              onChange={(e) =>
-                setOptions({ ...options, digits: e.target.checked })
-              }
-            />
             <span>0-9</span>
           </label>
+          <input
+            type="checkbox"
+            checked={options.digits}
+            onChange={(e) =>
+              setOptions({ ...options, digits: e.target.checked })
+            }
+          />
         </div>
+
         <div className="option">
           <label>
-            <input
-              type="checkbox"
-              className="checkbox"
-              checked={options.specials}
-              onChange={(e) =>
-                setOptions({ ...options, specials: e.target.checked })
-              }
-            />
             <span>!@$#%^</span>
           </label>
+          <input
+            type="checkbox"
+            checked={options.specials}
+            onChange={(e) =>
+              setOptions({ ...options, specials: e.target.checked })
+            }
+          />
         </div>
       </div>
       <button className="generate" onClick={handleGenerate}>
-        Generate
+        Generate Password
       </button>
     </div>
   );
