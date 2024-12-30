@@ -51,7 +51,7 @@ export default function TheForm() {
         />
       </div>
 
-      <div className="the-settings">
+      <div className="settings-title">
         <h6>SETTINGS</h6>
       </div>
 

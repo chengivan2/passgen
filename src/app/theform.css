@@ -128,6 +128,14 @@ div.length {
   flex: 2;
 }
 
+div.settings-title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
 .options {
   min-width: 100%;
   display: flex;
