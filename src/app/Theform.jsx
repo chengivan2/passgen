@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import "./theform.css";
+import { CopyIcon } from "@radix-ui/react-icons";
 
 export default function TheForm() {
   const [password, setPassword] = useState("");
@@ -33,9 +34,11 @@ export default function TheForm() {
           placeholder="Click on Generate Password"
           readOnly
         />
-        <button onClick={() => navigator.clipboard.writeText(password)}>
-          copy
-        </button>
+
+        <div className="copy-button" onClick={() => navigator.clipboard.writeText(password)}>
+          <CopyIcon />
+        </div>
+
       </div>
 
       <div className="the-length">
