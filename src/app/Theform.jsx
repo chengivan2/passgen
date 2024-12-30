@@ -69,6 +69,7 @@ export default function TheForm() {
               setOptions({ ...options, lowercase: e.target.checked })
             }
           />
+          <span></span>
         </div>
 
         <div className="option">
@@ -82,6 +83,7 @@ export default function TheForm() {
               setOptions({ ...options, uppercase: e.target.checked })
             }
           />
+          <span></span>
         </div>
 
         <div className="option">
@@ -95,6 +97,7 @@ export default function TheForm() {
               setOptions({ ...options, digits: e.target.checked })
             }
           />
+          <span></span>
         </div>
 
         <div className="option">
@@ -108,6 +111,7 @@ export default function TheForm() {
               setOptions({ ...options, specials: e.target.checked })
             }
           />
+          <span></span>
         </div>
       </div>
       <button className="generate" onClick={handleGenerate}>

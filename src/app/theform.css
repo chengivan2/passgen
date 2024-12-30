@@ -137,6 +137,41 @@
   align-items: center;
 }
 
+.option input[type="checkbox"] {
+  display: none;
+}
+
+.option input[type="checkbox"] + span {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.option input[type="checkbox"] + span:before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border-radius: 50%;
+  top: 1px;
+  left: 1px;
+  transition: transform 0.2s;
+}
+
+.option input[type="checkbox"]:checked + span {
+  background-color: #007bff;
+}
+
+.option input[type="checkbox"]:checked + span:before {
+  transform: translateX(20px);
+}
+
 .generate {
   padding: 10px 20px;
   border: none;
