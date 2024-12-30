@@ -35,6 +35,11 @@
   margin-right: 10px;
 }
 
+.the-password input::placeholder {
+  font-size: 12px;
+  color: #888;
+}
+
 .the-password button {
   padding: 10px 20px;
   border: none;
