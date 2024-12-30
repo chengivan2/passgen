@@ -62,6 +62,10 @@
   margin-bottom: 20px;
 }
 
+.the-length .length h6 {
+  font-size: 13px;
+}
+
 .the-length input {
   margin-right: 10px;
 }
