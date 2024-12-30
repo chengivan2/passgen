@@ -41,7 +41,7 @@ Passgen is a secure password generator application built with Next.js. It allows
 
 3. Use the interface to generate a password:
 
- - Adjust the length using the slider.
- - Select the character types you want to include (lowercase, uppercase, digits, specials).
- - Click the "Generate" button to create a password.
- - Copy the generated password to your clipboard by clicking the "Copy" button.
+  - Adjust the length using the slider.
+  - Select the character types you want to include (lowercase, uppercase, digits, specials).
+  - Click the "Generate" button to create a password.
+  - Copy the generated password to your clipboard by clicking the "Copy" button.
