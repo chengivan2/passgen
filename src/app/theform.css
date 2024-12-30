@@ -49,6 +49,7 @@
 }
 
 .the-length {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -108,11 +109,8 @@
 }
 
 .slider {
-  flex: 2;
-}
-
-.slider input {
   width: 100%;
+  flex: 2;
 }
 
 .options {
