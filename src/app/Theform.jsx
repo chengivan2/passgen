@@ -60,7 +60,7 @@ export default function TheForm() {
       <div className="options">
         <div className="option">
           <label>
-            <span>Lowercase: (a-z)</span>
+            <span>Lowercase (a-z)</span>
           </label>
           <input
             type="checkbox"
@@ -99,7 +99,7 @@ export default function TheForm() {
 
         <div className="option">
           <label>
-            <span>Symbols: (!@$#%^)</span>
+            <span>Symbols (!@$#%^)</span>
           </label>
           <input
             type="checkbox"
