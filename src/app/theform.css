@@ -26,7 +26,9 @@
 }
 
 .the-password input {
-  font-size: 24px;
+  position: relative;
+  width: 100%;
+  font-size: 16px;
   font-weight: bold;
   letter-spacing: 0.5px;
   color: #f8f8f8;
