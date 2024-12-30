@@ -30,7 +30,7 @@ export default function TheForm() {
         <input
           type="text"
           value={password}
-          placeholder="Click on Generate"
+          placeholder="Click on Generate Password"
           readOnly
         />
         <button onClick={() => navigator.clipboard.writeText(password)}>
@@ -40,8 +40,7 @@ export default function TheForm() {
 
       <div className="the-length">
         <div className="length">
-          <h6>LENGTH</h6>
-          <span>{length}</span>
+          <h6>LENGTH: <span>{length}</span></h6>
         </div>
         <input
           type="range"
