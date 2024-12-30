@@ -1,7 +1,6 @@
 export async function POST(request) {
   const { length, options } = await request.json();
 
-  // Generate the password based on the options and length
   const password = generatePassword(length, options);
 
   return new Response(JSON.stringify({ password }), {
@@ -13,41 +12,47 @@ export async function POST(request) {
 }
 
 function generatePassword(length, options) {
-    
   const charset = [];
   const mandatoryChars = [];
 
   if (options.lowercase) {
-    const lowercase = 'abcdefghijklmnopqrstuvwxyz';
+    const lowercase = "abcdefghijklmnopqrstuvwxyz";
     charset.push(lowercase);
-    mandatoryChars.push(lowercase[Math.floor(Math.random() * lowercase.length)]);
+    mandatoryChars.push(
+      lowercase[Math.floor(Math.random() * lowercase.length)]
+    );
   }
   if (options.uppercase) {
-    const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     charset.push(uppercase);
-    mandatoryChars.push(uppercase[Math.floor(Math.random() * uppercase.length)]);
+    mandatoryChars.push(
+      uppercase[Math.floor(Math.random() * uppercase.length)]
+    );
   }
   if (options.digits) {
-    const digits = '0123456789';
+    const digits = "0123456789";
     charset.push(digits);
     mandatoryChars.push(digits[Math.floor(Math.random() * digits.length)]);
   }
   if (options.specials) {
-    const specials = '!@$#%^(-)_\'"+=\\';
+    const specials = "!@$#%^(-)_'\"+=\\";
     charset.push(specials);
     mandatoryChars.push(specials[Math.floor(Math.random() * specials.length)]);
   }
 
-  const allChars = charset.join('');
-  let password = mandatoryChars.join('');
+  const allChars = charset.join("");
+  let password = mandatoryChars.join("");
 
   for (let i = mandatoryChars.length; i < length; i++) {
     const randomIndex = Math.floor(Math.random() * allChars.length);
     password += allChars[randomIndex];
   }
 
-  // Shuffle the password to ensure the mandatory characters are not in a predictable order
-  password = password.split('').sort(() => 0.5 - Math.random()).join('');
+  // Shuffling the password to ensure the mandatory characters are not in a predictable order
+  password = password
+    .split("")
+    .sort(() => 0.5 - Math.random())
+    .join("");
 
   return password;
 }
