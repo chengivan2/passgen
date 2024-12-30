@@ -48,7 +48,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: .8em;
+  padding: 0.8em;
   border: none;
   background-color: #007bff;
   color: white;
@@ -221,4 +221,20 @@ div.settings-title h6 {
 
 .generate:hover {
   background: linear-gradient(90deg, #0056b3, #007bff);
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+  .the-generator {
+    width: 50vw;
+    padding: 2.5em 1.5em;
+  }
+}
+
+/* Laptop styles */
+@media (min-width: 1024px) {
+  .the-generator {
+    width: 60vw;
+    padding: 3em 2em;
+  }
 }
