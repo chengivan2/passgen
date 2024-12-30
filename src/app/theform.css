@@ -126,7 +126,6 @@
   margin: 10px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   background: #3e033c;
   padding: 1em;
   border-radius: 0.5em;
@@ -135,13 +134,14 @@
 .option label {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .option input[type="checkbox"] {
   display: none;
 }
 
-.option input[type="checkbox"] + span {
+.option input[type="checkbox"] + .toggle {
   position: relative;
   display: inline-block;
   width: 40px;
@@ -152,7 +152,7 @@
   transition: background-color 0.2s;
 }
 
-.option input[type="checkbox"] + span:before {
+.option input[type="checkbox"] + .toggle:before {
   content: "";
   position: absolute;
   width: 18px;
@@ -164,11 +164,11 @@
   transition: transform 0.2s;
 }
 
-.option input[type="checkbox"]:checked + span {
+.option input[type="checkbox"]:checked + .toggle {
   background-color: #007bff;
 }
 
-.option input[type="checkbox"]:checked + span:before {
+.option input[type="checkbox"]:checked + .toggle:before {
   transform: translateX(20px);
 }
 
