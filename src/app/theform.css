@@ -19,11 +19,12 @@
   border-radius: 8px;
   background: #3e033c;
   color: #ccc;
-  font-size: 18px;
-  font-weight: bold;
 }
 
 .the-password input {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
   color: #f8f8f8;
   width: 300px;
   padding: 10px;
