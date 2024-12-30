@@ -1,8 +1,10 @@
 .the-generator {
+  width: 96vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 2em;
+  margin: 2em 1em;
   border-radius: 10px;
   background: #2d0231;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
@@ -13,6 +15,8 @@
 .the-password {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
   margin-bottom: 20px;
   margin: 20px 0;
   padding: 10px;
@@ -26,7 +30,6 @@
   font-weight: bold;
   letter-spacing: 0.5px;
   color: #f8f8f8;
-  width: 300px;
   padding: 10px;
   border: none;
   outline: none;
@@ -200,14 +203,18 @@ div.settings-title h6 {
 }
 
 .generate {
-  padding: 10px 20px;
+  padding: 1em 2em;
   border: none;
-  background-color: #28a745;
+  background: linear-gradient(90deg, #007bff, #0056b3);
   color: white;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: background 0.3s;
 }
 
 .generate:hover {
-  background-color: #218838;
+  background: linear-gradient(90deg, #0056b3, #007bff);
 }
