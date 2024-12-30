@@ -33,7 +33,7 @@ function generatePassword(length, options) {
     mandatoryChars.push(digits[Math.floor(Math.random() * digits.length)]);
   }
   if (options.specials) {
-    const specials = '!@$#%^';
+    const specials = '!@$#%^(-)_\'"+=\\';
     charset.push(specials);
     mandatoryChars.push(specials[Math.floor(Math.random() * specials.length)]);
   }
