@@ -60,7 +60,7 @@ export default function TheForm() {
       <div className="options">
         <div className="option">
           <label>
-            <span>Lowercase: a-z</span>
+            <span>Lowercase: (a-z)</span>
           </label>
           <input
             type="checkbox"
@@ -73,7 +73,7 @@ export default function TheForm() {
 
         <div className="option">
           <label>
-            <span>Uppercase: A-Z</span>
+            <span>Uppercase (A-Z)</span>
           </label>
           <input
             type="checkbox"
@@ -86,7 +86,7 @@ export default function TheForm() {
 
         <div className="option">
           <label>
-            <span>Numbers: 0-9</span>
+            <span>Numbers (0-9)</span>
           </label>
           <input
             type="checkbox"
