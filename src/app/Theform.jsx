@@ -45,7 +45,12 @@ export default function TheForm() {
         <input type="range" min="4" max="24" value={length} onChange={(e) => setLength(e.target.value)} />
       </div>
 
+      <div className="settings-title">
+        <h6>SETTINGS</h6>
+      </div>
+      
       <div className="options">
+        
         <div className="option">
           <label>
             <span>Lowercase (a-z)</span>
