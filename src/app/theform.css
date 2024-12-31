@@ -206,7 +206,13 @@ div.settings-title h6 {
   transform: translateX(20px);
 }
 
+.null-settings-error-message {
+  color: red;
+  font-size: 11px;
+}
+
 .generate {
+  margin: 1em;
   padding: 1em 2em;
   border: none;
   background: linear-gradient(90deg, #007bff, #0056b3);
