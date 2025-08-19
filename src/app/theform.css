@@ -372,7 +372,7 @@ div.settings-title h6 {
   border: none;
   background: linear-gradient(90deg, #007bff, #0056b3);
   color: white;
-  border-radius: 1000px;
+  border-radius: 9999px;
   cursor: pointer;
   font-size: 14px;
   font-weight: 600;
