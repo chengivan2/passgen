@@ -60,7 +60,7 @@
   color: white;
   border-radius: 5px;
   cursor: pointer;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-inter), system-ui, sans-serif;
   font-size: 13px;
   font-weight: 500;
   white-space: nowrap;
@@ -368,7 +368,7 @@ div.settings-title h6 {
 
 .generate {
   width: 100%;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-inter), system-ui, sans-serif;
   margin: 1em;
   padding: 1em 2em;
   border: none;
