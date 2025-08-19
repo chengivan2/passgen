@@ -9,8 +9,8 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "PassGen",
-  description: "Next Gen secure password generator",
+  title: "SecPassGen",
+  description: "Secure Next Gen password generator",
 };
 
 export default function RootLayout({ children }) {

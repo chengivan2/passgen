@@ -1,5 +1,3 @@
-/* Font imported in globals.css */
-
 .the-generator {
   width: 96vw;
   display: flex;
@@ -124,7 +122,6 @@
   }
 }
 
-/* Generating state for input */
 .the-password input.generating {
   opacity: 0.6;
   animation: shimmer 1.5s ease-in-out infinite;
@@ -148,7 +145,6 @@
   height: 16px;
 }
 
-/* Password Strength Indicator */
 .password-strength {
   width: 100%;
   margin: 15px 0;
