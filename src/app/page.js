@@ -1,5 +1,6 @@
 import styles from "./page.module.css";
 import TheForm from "./Theform";
+import Footer from "./Footer";
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
       <main className={styles.main}>
         <TheForm />
       </main>
+      <Footer />
     </div>
   );
 }

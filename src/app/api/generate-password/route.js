@@ -11,48 +11,58 @@ export async function POST(request) {
   });
 }
 
+import { randomBytes } from 'crypto';
+
 function generatePassword(length, options) {
   const charset = [];
   const mandatoryChars = [];
+
+  // Use crypto for better randomness
+  const getSecureRandomIndex = (max) => {
+    const randomBuffer = randomBytes(1);
+    return randomBuffer[0] % max;
+  };
 
   if (options.lowercase) {
     const lowercase = "abcdefghijklmnopqrstuvwxyz";
     charset.push(lowercase);
     mandatoryChars.push(
-      lowercase[Math.floor(Math.random() * lowercase.length)]
+      lowercase[getSecureRandomIndex(lowercase.length)]
     );
   }
   if (options.uppercase) {
     const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     charset.push(uppercase);
     mandatoryChars.push(
-      uppercase[Math.floor(Math.random() * uppercase.length)]
+      uppercase[getSecureRandomIndex(uppercase.length)]
     );
   }
   if (options.digits) {
     const digits = "0123456789";
     charset.push(digits);
-    mandatoryChars.push(digits[Math.floor(Math.random() * digits.length)]);
+    mandatoryChars.push(digits[getSecureRandomIndex(digits.length)]);
   }
   if (options.specials) {
     const specials = "!@$#%^(-)_'\"+=\\";
     charset.push(specials);
-    mandatoryChars.push(specials[Math.floor(Math.random() * specials.length)]);
+    mandatoryChars.push(specials[getSecureRandomIndex(specials.length)]);
   }
 
   const allChars = charset.join("");
   let password = mandatoryChars.join("");
 
+  // Generate remaining characters
   for (let i = mandatoryChars.length; i < length; i++) {
-    const randomIndex = Math.floor(Math.random() * allChars.length);
+    const randomIndex = getSecureRandomIndex(allChars.length);
     password += allChars[randomIndex];
   }
 
-  // Shuffling the password to ensure the mandatory characters are not in a predictable order
-  password = password
-    .split("")
-    .sort(() => 0.5 - Math.random())
-    .join("");
+  // Secure shuffling using Fisher-Yates algorithm with crypto random
+  const passwordArray = password.split("");
+  for (let i = passwordArray.length - 1; i > 0; i--) {
+    const j = getSecureRandomIndex(i + 1);
+    [passwordArray[i], passwordArray[j]] = [passwordArray[j], passwordArray[i]];
+  }
 
-  return password;
+  return passwordArray.join("");
 }

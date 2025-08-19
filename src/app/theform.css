@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Font imported in globals.css */
 
 .the-generator {
   width: 96vw;
@@ -8,10 +8,11 @@
   padding: 2em 1em;
   margin: 2em 1em;
   border-radius: 10px;
-  background: #2d0231;
+  background: var(--card-bg);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
   text-align: center;
-  color: #f5f5f5;
+  color: var(--text-primary);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .the-password {
@@ -23,8 +24,10 @@
   margin: 20px 0;
   padding: 10px;
   border-radius: 8px;
-  background: #3e033c;
-  color: #ccc;
+  background: var(--card-secondary);
+  color: var(--text-secondary);
+  transition: background 0.3s ease;
+  position: relative;
 }
 
 .the-password input {
@@ -33,7 +36,7 @@
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 0.5px;
-  color: #f8f8f8;
+  color: var(--text-primary);
   padding: 10px;
   border: none;
   outline: none;
@@ -50,16 +53,165 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.8em;
+  gap: 6px;
+  padding: 0.6em 1em;
   border: none;
   background-color: #007bff;
   color: white;
   border-radius: 5px;
   cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.the-password .copy-button svg {
+  width: 14px;
+  height: 14px;
 }
 
 .the-password button:hover {
   background-color: #0056b3;
+}
+
+.the-password button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.copy-button.copied {
+  background-color: #28a745 !important;
+  animation: pulse 0.3s ease;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Loading spinner animation */
+.loading-spinner {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+  width: 20px;
+  height: 20px;
+  color: var(--text-secondary);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Generating state for input */
+.the-password input.generating {
+  opacity: 0.6;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+/* Inline icon for button */
+.inline-icon {
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+}
+
+/* Password Strength Indicator */
+.password-strength {
+  width: 100%;
+  margin: 15px 0;
+  padding: 15px;
+  background: var(--card-secondary);
+  border-radius: 8px;
+  animation: fadeIn 0.3s ease;
+  opacity: 0.8;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.strength-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.strength-meter {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.strength-bar {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease, background 0.3s ease;
+}
+
+.strength-bar.weak {
+  width: 33%;
+  background: linear-gradient(90deg, #dc3545, #ff6b6b);
+}
+
+.strength-bar.medium {
+  width: 66%;
+  background: linear-gradient(90deg, #ffc107, #ffcd38);
+}
+
+.strength-bar.strong {
+  width: 100%;
+  background: linear-gradient(90deg, #28a745, #4caf50);
+}
+
+.strength-text {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.strength-text.weak {
+  color: #ff6b6b;
+}
+
+.strength-text.medium {
+  color: #ffcd38;
+}
+
+.strength-text.strong {
+  color: #4caf50;
 }
 
 .the-length {
@@ -161,9 +313,10 @@ div.settings-title h6 {
   margin: 10px;
   display: flex;
   align-items: center;
-  background: #3e033c;
+  background: var(--card-secondary);
   padding: 1em;
   border-radius: 0.5em;
+  transition: background 0.3s ease;
 }
 
 .option label {
@@ -215,7 +368,7 @@ div.settings-title h6 {
 
 .generate {
   width: 100%;
-  font-family: "Poppins";
+  font-family: "Inter", sans-serif;
   margin: 1em;
   padding: 1em 2em;
   border: none;
@@ -226,11 +379,27 @@ div.settings-title h6 {
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 1.5px;
-  transition: background 0.3s;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
-.generate:hover {
+.generate:hover:not(:disabled) {
   background: linear-gradient(90deg, #0056b3, #007bff);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.generate:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+  background: linear-gradient(90deg, #6c757d, #5a6268);
+}
+
+.generate:active:not(:disabled) {
+  transform: translateY(0);
 }
 
 /* Tablet styles */
@@ -255,4 +424,67 @@ div.settings-title h6 {
   .the-password input {
     font-size: 22px;
   }
+}
+
+/* Light theme specific styles */
+[data-theme="light"] .the-generator {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .the-password input::placeholder {
+  color: #9ca3af;
+}
+
+[data-theme="light"] .option input[type="checkbox"] + .toggle {
+  background-color: #d1d5db;
+}
+
+[data-theme="light"] .option input[type="checkbox"]:checked + .toggle {
+  background-color: #3b82f6;
+}
+
+[data-theme="light"] .the-length input[type="range"] {
+  background: #e5e7eb;
+}
+
+[data-theme="light"] .the-length input[type="range"]::-webkit-slider-thumb {
+  background: #3b82f6;
+}
+
+[data-theme="light"] .the-length input[type="range"]::-moz-range-thumb {
+  background: #3b82f6;
+}
+
+[data-theme="light"] .the-length input[type="range"]::-ms-thumb {
+  background: #3b82f6;
+}
+
+[data-theme="light"] .generate {
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+}
+
+[data-theme="light"] .generate:hover:not(:disabled) {
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+[data-theme="light"] .generate:disabled {
+  background: linear-gradient(90deg, #9ca3af, #6b7280);
+}
+
+[data-theme="light"] .copy-button {
+  background-color: #3b82f6 !important;
+}
+
+[data-theme="light"] .copy-button:hover {
+  background-color: #2563eb !important;
+}
+
+[data-theme="light"] .strength-meter {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] div.settings-title h6 {
+  color: #6b7280;
 }
