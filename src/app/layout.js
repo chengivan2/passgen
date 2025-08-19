@@ -11,6 +11,11 @@ const inter = Inter({
 export const metadata = {
   title: "SecPassGen",
   description: "Secure Next Gen password generator",
+  openGraph: {
+    images: [
+      "https://res.cloudinary.com/doqbnfais/image/upload/v1755585047/projectsAssets/Logos/SecrePassGen_Logo_dvsbrl.png"
+    ]
+  }
 };
 
 export default function RootLayout({ children }) {
